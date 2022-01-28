@@ -1,0 +1,25 @@
+.header{
+    min-height: 19.68rem; 
+    background-position: center !important;
+    background-size: cover !important;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4.5rem 0 3.5rem 0;
+        
+    }
+    .logo{
+        text-transform: uppercase;
+        color:#fff;
+        letter-spacing: 1.2rem;
+        font-size: 2.4rem;
+    }
+    .toggle{
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        width: 26px;
+        height: 26px;
+    }
+}

@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif; }
+
+.container {
+  width: 88%;
+  margin: 0 auto;
+  max-width: 470px; }
+
+span {
+  color: #777a92; }
+
+.btn, .toggle, .remove, .left, .check_status, .create_button {
+  cursor: pointer; }
+
+.header {
+  min-height: 19.68rem;
+  background-position: center !important;
+  background-size: cover !important; }
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 0 3.5rem 0; }
+  .header .logo {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1.2rem;
+    font-size: 2.4rem; }
+  .header .toggle {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    width: 26px;
+    height: 26px; }
+
+.dark body {
+  background-color: #161722; }
+  .dark body .header {
+    background-image: url(../images/bg-mobile-dark.jpg); }
+    @media (min-width: 500px) {
+      .dark body .header {
+        background: url(../images/bg-desktop-dark.jpg); } }
+  .dark body .create_to-do,
+  .dark body .list-container,
+  .dark body .list_status-container,
+  .dark body .items_count-container,
+  .dark body .check_status,
+  .dark body .create_button {
+    background: #25273c; }
+  .dark body .list-container::before {
+    content: unset; }
+  .dark body .create_button {
+    color: #393a4c; }
+    .dark body .create_button:hover {
+      color: #57ddff; }
+  .dark body .btn:not(.filter_activated):hover {
+    color: #e4e5f1; }
+  .dark body .left {
+    background: #393a4c; }
+  .dark body .text-container, .dark body .to-do_input {
+    color: #bababa; }
+  .dark body .to-do {
+    border-bottom-color: #393a4c !important; }
+  .dark body .toggle {
+    background-image: url(../images/icon-sun.svg); }
+  .dark body .attribution {
+    color: #fff; }
+    .dark body .attribution a {
+      color: orangered; }
+
+.light body {
+  background-color: #e4e5f1; }
+  .light body .header {
+    background-image: url(../images/bg-mobile-light.jpg); }
+    @media (min-width: 500px) {
+      .light body .header {
+        background: url(../images/bg-desktop-light.jpg); } }
+  .light body .create_to-do,
+  .light body .list-container,
+  .light body .list_status-container,
+  .light body .items_count-container,
+  .light body .check_status,
+  .light body .create_button {
+    background: #fafafa; }
+  .light body .create_button {
+    color: #d2d3db; }
+    .light body .create_button:hover {
+      color: #c058f3; }
+  .light body .btn:not(.filter_activated):hover {
+    color: #161722; }
+  .light body .left {
+    background: #d2d3db; }
+  .light body .text-container, .light body .to-do_input {
+    color: #484b6a; }
+  .light body .to-do {
+    border-bottom-color: #d2d3db !important; }
+  .light body .toggle {
+    background-image: url(../images/icon-moon.svg); }
+  .light body .attribution {
+    color: #000; }
+    .light body .attribution a {
+      color: #0014ff; }
+
+.hide {
+  display: none !important; }
+
+.check_status, .create_button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 25px; }
+
+.left:hover {
+  background: linear-gradient(130deg, #57ddff, #c058f3) !important; }
+
+.completed .left {
+  background: linear-gradient(130deg, #57ddff, #c058f3) !important; }
+
+.completed .check_status, .completed .create_button {
+  background: transparent !important; }
+
+.completed .sign {
+  display: unset !important; }
+
+.completed .text-container {
+  text-decoration: line-through;
+  opacity: .5; }
+
+.filter_activated {
+  color: #3a7bfd; }
+
+.blue-background-class {
+  background: #3a7bfd; }
+  .blue-background-class .check_status, .blue-background-class .create_button {
+    background: #3a7bfd; }
+
+.btn_desktop {
+  display: none; }
+  @media (min-width: 500px) {
+    .btn_desktop {
+      display: unset; } }
+
+@media (min-width: 500px) {
+  .btn_container_mobile {
+    display: none !important; } }
+
+.list-container {
+  position: relative; }
+  .list-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    box-shadow: 0 30px 50px -20px #cacde8, -20px 0 50px -30px #cacde8, 20px 0 50px -30px #cacde8;
+    border-radius: 5px; }
+
+.create_to-do, .to-do {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  min-height: 4.5rem;
+  border-radius: 5px;
+  padding: 0 2rem;
+  caret-color: #3a7bfd; }
+  .create_to-do > *, .to-do > * {
+    background: transparent; }
+  .create_to-do .left, .to-do .left {
+    border-radius: 100px;
+    padding: 1px; }
+    .create_to-do .left .check_status, .create_to-do .left .create_button, .to-do .left .check_status, .to-do .left .create_button {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .create_to-do .left .check_status .sign, .create_to-do .left .create_button .sign, .to-do .left .check_status .sign, .to-do .left .create_button .sign {
+        display: none; }
+  .create_to-do .remove, .to-do .remove {
+    width: 14px; }
+  .create_to-do .to-do_input, .to-do .to-do_input {
+    height: 100%;
+    border: 0;
+    outline: none;
+    flex: 1;
+    font-family: inherit; }
+  .create_to-do .text-container, .to-do .text-container {
+    flex: 1;
+    overflow-wrap: anywhere; }
+    .create_to-do .text-container .text, .to-do .text-container .text {
+      list-style: none;
+      width: inherit;
+      overflow-wrap: break-word; }
+
+.to-do_container {
+  margin-top: -3rem; }
+  .to-do_container .list-container {
+    height: 27rem;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+    .to-do_container .list-container::-webkit-scrollbar {
+      width: 0; }
+    .to-do_container .list-container .to-do {
+      grid-template-columns: auto 1fr auto;
+      border-radius: 0px; }
+      .to-do_container .list-container .to-do {
+        border-bottom: 1px solid; }
+  .to-do_container .items_count-container {
+    border-radius: 0 0 5px 5px;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0 2rem; }
+
+.list_status-container {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  border-radius: 5px; }
+  .list_status-container span {
+    font-weight: 700; }
+    .list_status-container span:not(:last-child) {
+      margin-right: 1.4rem; }
+
+.btn_container_mobile {
+  margin-bottom: 1rem; }

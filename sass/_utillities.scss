@@ -1,0 +1,36 @@
+.hide{
+    display: none !important;
+}
+
+.check_status,.create_button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.left:hover{
+        background:linear-gradient(130deg ,$linear-one , $linear-two) !important;
+}
+
+.completed{
+    .left{background:linear-gradient(130deg ,$linear-one , $linear-two) !important;}
+    .check_status,.create_button{background:transparent !important;}
+    .sign{display:unset !important;}
+    .text-container{text-decoration: line-through;opacity: .5;}
+}
+
+.filter_activated{
+    color:$Bright-Blue;
+}
+
+.blue-background-class{
+    background:$Bright-Blue;
+    .check_status,.create_button{background:$Bright-Blue;}
+}
+.btn_desktop{
+    display: none;
+    @include breakpoints-up(large){display: unset;}
+}
+.btn_container_mobile{
+    @include breakpoints-up(large){display: none !important;}
+}

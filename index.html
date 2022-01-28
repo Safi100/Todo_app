@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+    <div class="header__top">
+      <h1 class="logo">Todo</h1>
+        <div class="toggle"></div>
+    </div>
+        <form class="create_to-do">
+          <div class="left"><div class="create_button">+</div></div>
+          <input class="to-do_input" type="text" placeholder="Create a new to do...">
+        </form>
+  </div>
+  </header>
+  <main>
+    <div class="to-do_container">
+      <div class="container">
+        <div class="list-container"></div>
+      <div class="items_count-container">
+        <span><span class="counter">0</span> items left</span>
+        <div class="list_status-container">
+          <span class="btn btn_desktop btn_all filter_activated">All</span>
+          <span class="btn btn_desktop btn_active">Active</span>
+          <span class="btn btn_desktop btn_completed">Completed</span>
+        </div>
+        <span class="btn clear-complete_btn">Clear Completed</span>
+      </div>
+      <div class="list_status-container btn_container_mobile">
+        <span class="btn btn_all filter_activated">All</span>
+        <span class="btn btn_active">Active</span>
+        <span class="btn btn_completed">Completed</span>
+      </div>
+    </div>
+  </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Safi100" target="_blank">Safi Nafi</a>.
+  </div>
+
+ 
+
+
+  
+
+
+
+  <script src="java script/toggle.js"></script>
+  <script src="java script/to-do.js"></script>
+</body>
+</html>
+
+<style>
+  p{text-align: center;margin-bottom: 1rem;}
+  .attribution { font-size: 11px; text-align: center; }
+</style>

@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: $font-size;
+    font-family: $Josefin-font;
+}
+
+.container{
+    width: 88%;
+    margin: 0 auto;
+    max-width: 470px;
+}
+
+
+span{
+    color:$Dark-Grayish-Blue;
+}
+
+.btn,.toggle,.remove,.left,.check_status,.create_button{
+    cursor: pointer;
+}
